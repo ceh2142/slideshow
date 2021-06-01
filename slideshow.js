@@ -5,6 +5,13 @@ var captionImages =["Laugh","Love","Lunch","Happiness","Family"];
 
  var index=0; 
 
+setInterval(autoSlide,2000); // Next
+
+function autoSlide(){
+if (document.getElementById("auto").checked)
+ next(); 
+}
+ 
  function updateImage(){
  document.getElementById("slideshow").src = myImages[index];
  document.getElementById("slideshow").alt= captionImages[index];
@@ -35,10 +42,4 @@ var previousButton = document.getElementById("previous");
 previousButton.addEventListener("click",back,false);
 nextButton.addEventListener("click",next,false); 
 
-function autoSlide(){
-if (document.getElementById("auto").checked)
- next(); 
-}
 
-
-setInterval(autoSlide,2000); // Next
