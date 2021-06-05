@@ -3,7 +3,6 @@ body {
     font-family: 'NewTelegraphRegular';
     font-weight: normal;
     font-style: normal;
-    text-align: center;
     margin: 20px;
     padding: 0;
     background-image: url('stars.gif');
@@ -31,5 +30,4 @@ fieldset {
     border: 1px solid white;
     border-radius: 10px;
     width: 515px;
-    margin: auto;
 }
