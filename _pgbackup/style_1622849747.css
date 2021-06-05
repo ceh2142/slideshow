@@ -1,8 +1,6 @@
 body {
     height: 100%;
-    font-family: 'NewTelegraphRegular';
-    font-weight: normal;
-    font-style: normal;
+    font-family: GenLight, sans-serif;
     margin: 20px;
     padding: 0;
     background-image: url('stars.gif');
@@ -23,6 +21,10 @@ h1 {
 
 #slideshow {
     border-radius: 10px;
+}
+
+#caption {
+    font-style: italic;
 }
 
 fieldset {

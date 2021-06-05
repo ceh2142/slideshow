@@ -1,45 +1,43 @@
-var myImages =["https://www.imms.org/images/dolphin_presentation/dolphin1.jpg", "http://cdn3.theeventchronicle.com/wp-content/uploads/2014/09/dolphin-intelligence.jpg","http://www.liveanimalslist.com/mammals/images/dolphin-in-water.jpg","http://i1151.photobucket.com/albums/o632/bowietvc15/Bowietvc15-2/DolphinsWallpaper2.jpg","http://i1151.photobucket.com/albums/o632/bowietvc15/funny%20gifs/animal-art-cute-dolphin-nature-Favimcom-311780.jpg"];
+var myImages =["earth.jpg", "mars.jpg","jupiter.jpg", "saturn.jpg", "uranus.jpg"];
 
 
-var captionImages =["Laugh","Love","Lunch","Happiness","Family"];
+var captionImages =["Earth: Third Planet From the Sun", "Mars: Fourth Planet From the Sun", "Jupiter: Fifth Planet From the Sun", "Saturn: Sixth Planet From the Sun", "Uranus: Seventh Planet From the Sun"]; 
 
- var index=0; 
+var index=0; 
 
 setInterval(autoSlide,2000); // Next
-
-function autoSlide(){
+function autoSlide()
+{
 if (document.getElementById("auto").checked)
- next(); 
+ nextImg(); 
 }
- 
- function updateImage(){
+
+function updateImage()
+{
  document.getElementById("slideshow").src = myImages[index];
  document.getElementById("slideshow").alt= captionImages[index];
  document.getElementById("caption").textContent = captionImages[index]; 
 } 
 
-function next(){
+var nextButton = document.getElementById("next"); 
+function nextImg()
+{
  if (myImages.length == index+1)
  index=0;
  else
  index++;
  updateImage();
 } 
- 
-
-function back(){
- if (index===0)
+nextButton.addEventListener("click",nextImg,false); 
+//Back 
+var previousButton = document.getElementById("previous"); 
+function backImg()
+{
+ if (index==0)
  index=myImages.length-1;
  else
  index--;
  
  updateImage();
 } 
-
-var nextButton = document.getElementById("next"); 
-var previousButton = document.getElementById("previous"); 
-
-previousButton.addEventListener("click",back,false);
-nextButton.addEventListener("click",next,false); 
-
-
+previousButton.addEventListener("click",backImg,false);
